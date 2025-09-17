@@ -4,9 +4,6 @@ version = "1.0.0"
 edition = "2024.beta"
 published-at = "0x1f5cc04be357626eb10e0b844dbc87b0cb4f54cbe4dc9d7601df331c7d973cf8"
 
-[dependencies]
-Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/mainnet" }
-
 [addresses]
 ember_vaults = "0xc83d5406fd355f34d3ce87b35ab2c0b099af9d309ba96c17e40309502a49976f"
 
