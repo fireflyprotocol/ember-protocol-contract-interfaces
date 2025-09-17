@@ -201,26 +201,50 @@ module ember_vaults::vault {
 
     // === View Functions ===
 
+    /// Returns the id of the vault
+    /// Parameters:
+    /// - vault: The vault to get the id from
+    /// Returns: The id of the vault
     public fun get_vault_id<T,R>(_vault: &Vault<T,R>): ID {
         abort 0
     }
 
+    /// Returns the name of the vault
+    /// Parameters:
+    /// - vault: The vault to get the name from
+    /// Returns: The name of the vault
     public fun get_vault_name<T,R>(_vault: &Vault<T,R>): String {
         abort 0
     }
 
+    /// Returns the admin of the vault
+    /// Parameters:
+    /// - vault: The vault to get the admin from
+    /// Returns: The admin of the vault
     public fun get_vault_admin<T,R>(_vault: &Vault<T,R>): address {
         abort 0
     }
 
+    /// Returns the operator of the vault
+    /// Parameters:
+    /// - vault: The vault to get the operator from
+    /// Returns: The operator of the vault
     public fun get_vault_operator<T,R>(_vault: &Vault<T,R>): address {
         abort 0
     }
 
+    /// Returns the blacklisted accounts of the vault
+    /// Parameters:
+    /// - vault: The vault to get the blacklisted accounts from
+    /// Returns: The blacklisted accounts of the vault
     public fun get_vault_blacklisted<T,R>(_vault: &Vault<T,R>): vector<address> {
         abort 0
     }
 
+    /// Returns the paused status of the vault
+    /// Parameters:
+    /// - vault: The vault to get the paused status from
+    /// Returns: The paused status of the vault
     public fun get_vault_paused<T,R>(_vault: &Vault<T,R>): bool {
         abort 0
     }
@@ -234,107 +258,218 @@ module ember_vaults::vault {
         abort 0
     }
 
+    /// Returns the pending withdrawal requests of the account
+    /// Parameters:
+    /// - vault: The vault to get the pending withdrawal requests from
+    /// - account: The account to get the pending withdrawal requests from
+    /// Returns: The pending withdrawal requests of the account
     public fun get_account_pending_withdrawal_requests<T,R>(_vault: &Vault<T,R>, _account: address): vector<WithdrawalRequest> {
         abort 0
     }
 
+    /// Returns the sequencer numbers of the cancelled withdrawal requests of the account
+    /// Parameters:
+    /// - vault: The vault to get the cancelled withdrawal requests from
+    /// - account: The account to get the cancelled withdrawal requests from
+    /// Returns: The sequencer numbers of the cancelled withdrawal requests of the account
     public fun get_account_cancelled_withdraw_request_sequencer_numbers<T,R>(_vault: &Vault<T,R>, _account: address): vector<u128> {
         abort 0
     }
 
+    /// Returns the pending shares to redeem
+    /// Parameters:
+    /// - vault: The vault to get the pending shares to redeem from
+    /// Returns: The pending shares to redeem
     public fun get_pending_shares_to_redeem<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Returns the sub accounts of the vault
+    /// Parameters:
+    /// - vault: The vault to get the sub accounts from
+    /// Returns: The sub accounts of the vault
     public fun get_vault_sub_accounts<T,R>(_vault: &Vault<T,R>): vector<address> {
         abort 0
     }
 
+    /// Returns the rate of the vault
+    /// Parameters:
+    /// - vault: The vault to get the rate from
+    /// Returns: The rate of the vault
     public fun get_vault_rate<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Returns the rate update interval of the vault
+    /// Parameters:
+    /// - vault: The vault to get the rate update interval from
+    /// Returns: The rate update interval of the vault
     public fun get_vault_rate_update_interval<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Returns the max rate change per update of the vault
+    /// Parameters:
+    /// - vault: The vault to get the max rate change per update from
+    /// Returns: The max rate change per update of the vault
     public fun get_vault_max_rate_change_per_update<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Returns the last updated at of the vault
+    /// Parameters:
+    /// - vault: The vault to get the last updated at from
+    /// Returns: The last updated at of the vault
     public fun get_vault_last_updated_at<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
+
+    /// Returns the balance of the vault
+    /// Parameters:
+    /// - vault: The vault to get the balance from
+    /// Returns: The balance of the vault
     public fun get_vault_balance<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Returns the sequence number of the vault
+    /// Parameters:
+    /// - vault: The vault to get the sequence number from
+    /// Returns: The sequence number of the vault
     public fun get_vault_sequence_number<T,R>(_vault: &Vault<T,R>): u128 {
         abort 0
     }
 
+    /// Returns the fee percentage of the vault
+    /// Parameters:
+    /// - vault: The vault to get the fee percentage from
+    /// Returns: The fee percentage of the vault
     public fun get_vault_fee_percentage<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Returns the min withdrawal shares of the vault
+    /// Parameters:
+    /// - vault: The vault to get the min withdrawal shares from
+    /// Returns: The min withdrawal shares of the vault
     public fun get_vault_min_withdrawal_shares<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Returns the max TVL of the vault
+    /// Parameters:
+    /// - vault: The vault to get the max TVL from
+    /// Returns: The max TVL of the vault
     public fun get_vault_max_tvl<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Returns the accrued platform fee of the vault
+    /// Parameters:
+    /// - vault: The vault to get the accrued platform fee from
+    /// Returns: The accrued platform fee of the vault
     public fun get_accrued_platform_fee<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Returns the last charged at of the platform fee
+    /// Parameters:
+    /// - vault: The vault to get the last charged at of the platform fee from
+    /// Returns: The last charged at of the platform fee
     public fun get_last_charged_at_platform_fee<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Verifies if the vault is not paused
+    /// Parameters:
+    /// - vault: The vault to verify if it is not paused
+    /// Aborts with:
+    /// - EVaultPaused: If the vault is paused
     public fun verify_vault_not_paused<T,R>(_vault: &Vault<T,R>){
         abort 0
     }
 
+    /// Returns the blacklisted accounts of the vault
+    /// Parameters:
+    /// - vault: The vault to get the blacklisted accounts from
+    /// Returns: The blacklisted accounts of the vault
     public fun get_vault_blacklisted_accounts<T,R>(_vault: &Vault<T,R>): vector<address> {
         abort 0
     }
     
     /// Returns the total number of shares in circulation i.e. total supply of receipt tokens - pending shares to burn
+    /// Parameters:
+    /// - vault: The vault to get the total number of shares in circulation from
+    /// Returns: The total number of shares in circulation
     public fun get_vault_total_shares_in_circulation<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
     /// Returns the total shares of the vault
+    /// Parameters:
+    /// - vault: The vault to get the total shares from
+    /// Returns: The total shares of the vault
     public fun get_vault_total_shares<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Verifies if the account is not blacklisted
+    /// Parameters:
+    /// - vault: The vault to verify if the account is not blacklisted
+    /// - account: The account to verify if it is not blacklisted
+    /// Aborts with:
+    /// - EBlacklistedAccount: If the account is blacklisted
     public fun verify_not_blacklisted<T,R>(_vault: &Vault<T,R>, _account: address){
         abort 0
     }
 
+    /// Returns if the account is blacklisted
+    /// Parameters:
+    /// - vault: The vault to get the blacklisted accounts from
+    /// - account: The account to get the blacklisted status from
+    /// Returns: The blacklisted status of the account
     public fun is_blacklisted<T,R>(_vault: &Vault<T,R>, _account: address): bool {
         abort 0
     }
 
+    /// Returns the withdrawal queue of the vault
+    /// Parameters:
+    /// - vault: The vault to get the withdrawal queue from
+    /// Returns: The withdrawal queue of the vault
     public fun get_withdrawal_queue<T,R>(_vault: &Vault<T,R>): &Queue<WithdrawalRequest> {
         abort 0
     }
 
+    /// Decodes the withdrawal request
+    /// Parameters:
+    /// - request: The withdrawal request to decode
+    /// Returns: The decoded withdrawal request
     public fun decode_withdrawal_request(_request: &WithdrawalRequest): (address, address, u64, u64, u64, u128) {
         abort 0
     }
 
+    /// Returns the TVL of the vault
+    /// Parameters:
+    /// - vault: The vault to get the TVL from
+    /// Returns: The TVL of the vault
     public fun get_vault_tvl<T,R>(_vault: &Vault<T,R>): u64 {
         abort 0
     }
 
+    /// Calculates the shares from the amount
+    /// Parameters:
+    /// - vault: The vault to calculate the shares from
+    /// - amount: The amount to calculate the shares from
+    /// Returns: The shares from the amount
     public fun calculate_shares_from_amount<T,R>(_vault: &Vault<T,R>, _amount: u64): u64 {
         abort 0
     }
 
+    /// Calculates the amount from the shares
+    /// Parameters:
+    /// - vault: The vault to calculate the amount from
+    /// - shares: The shares to calculate the amount from
+    /// Returns: The amount from the shares
     public fun calculate_amount_from_shares<T,R>(_vault: &Vault<T,R>, _shares: u64): u64 {
         abort 0
     }
