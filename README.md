@@ -1,5 +1,5 @@
 <div align="center">
-  <img height="100x" src="https://bluefin.io/images/bluefin-logo.svg" />
+  <img height="100x" src="https://bluefin.io/images/logos/eELP.svg" />
 
   <h1 style="margin-top:20px;">Ember Vaults Contract Interface</h1>
 
