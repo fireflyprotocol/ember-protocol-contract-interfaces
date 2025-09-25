@@ -2,7 +2,7 @@
 name = "EmberVaults"
 version = "1.0.0"
 edition = "2024.beta"
-published-at = "0x1f5cc04be357626eb10e0b844dbc87b0cb4f54cbe4dc9d7601df331c7d973cf8"
+published-at = "0x3635933713dc35fe5e34f598b32a9d78c3b68faeb8dc5a842c5c6e5d549f56d4"
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/mainnet" }
